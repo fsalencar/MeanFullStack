@@ -1,6 +1,6 @@
 'use strict'
 
-let controller = require('../app/controllers/home');
+let controller = require('../controllers/home')();
 
 module.exports = function(app){
     app.get('/index', controller.index);
