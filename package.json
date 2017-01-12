@@ -1,0 +1,30 @@
+{
+  "name": "contatooh",
+  "version": "1.0.0",
+  "description": "Projeto Mean Full stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsalencar/MeanFullStack.git"
+  },
+  "keywords": [
+    "Git",
+    "Mean",
+    "Node",
+    "Angular",
+    "MongoDB",
+    "Tarek"
+  ],
+  "author": "Felipe Alencar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fsalencar/MeanFullStack/issues"
+  },
+  "homepage": "https://github.com/fsalencar/MeanFullStack#readme",
+  "dependencies": {
+    "express": "^4.8.8"
+  }
+}
