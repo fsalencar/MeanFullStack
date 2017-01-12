@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/fsalencar/MeanFullStack#readme",
   "dependencies": {
+    "ejs": "^0.6.1",
     "express": "^4.8.8"
   }
 }
