@@ -4,11 +4,19 @@
 let express = require('express');
 let home = require('../app/routes/home');
 let load = require('express-load');
+let bodyParser = require('body-parser');
 
 module.exports = function(){
     let app = express();
     app.set('port',3000)
     app.use(express.static('./public')); //middleware
+
+//body-parser
+
+app.use(express.static('./public'));
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
+app.use(require('method-override')());
 
 //    home(app);
 

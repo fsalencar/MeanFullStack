@@ -3,6 +3,6 @@
 let controller = require('../controllers/home')();
 
 module.exports = function(app){
-    app.get('/index', controller.index);
+    let controller = app.controllers.home;
     app.get('/', controller.index);
 }
