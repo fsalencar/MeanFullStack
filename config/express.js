@@ -2,7 +2,7 @@
 
 //Carregando módulo do express dentro da variável express (utilizando a função require)
 let express = require('express');
-let home = require('../app/routes/home');
+//let home = require('../app/routes/home');
 let load = require('express-load');
 let bodyParser = require('body-parser');
 

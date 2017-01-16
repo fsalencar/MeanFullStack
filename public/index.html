@@ -3,15 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Projeto MEAN</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
   </head>
-  <body >
+  <body class="container">
+
       <h1>Bem vindo ao projeto MEAN</h1>
 
-      <button type="button" name="button">Novo</button>
+    <!--  <button ng-click="incrementa()" type="button" name="button">Novo</button> !-->
       <p>Contatos cadastrados: {{total}}</p>
 
-
-<script src="vendor/angular/angular.js"></script>
-<script src="js/main.js"></script>
+  <body ng-view></body>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers/ContatosController.js"></script>
+    <script src="js/controllers/ContatoController.js"></script>
   </body>
 </html>
