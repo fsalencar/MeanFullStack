@@ -1,26 +1,22 @@
 
 
 angular.module('LivroMean').controller('ContatosController',
-  function($scope){
+  function($scope, $http){
 
-            $scope.total = 0;
+            $scope.contatos = [];
             $scope.incrementa = function() {
-              $scope.total++;
+            $scope.total++;
             };
-            $scope.contatos = [
-              {"_id": 1,
-              "nome":"Jhontinha Noob",
-              "email":"jhontinha@stefanini.com"
-              },
-              {"id":2,
-              "nome":"Gaucho",
-              "email":"capoeiraDeGaucho@gmail.com"
-            },
-            {"id":3,
-            "nome":"Zenon",
-            "email":"SenhorBarriga@gmail.com"
-          },
-        ];
+            $scope.total = 0;
+
+            $http.get('/contatos').success(function(data){
+              $scope.contatos = data;
+            })
+              .error(function(statusText){
+                console.log("Não foi possivel completar a lista de contatos");
+                console.log(statusText);
+              });
+
         $scope.filtro=''; //Declara o filtro da html contatos para utilizar a propriedade FILTER na página
 
 });
