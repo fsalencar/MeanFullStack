@@ -6,7 +6,13 @@ angular.module('LivroMean', ['ngRoute', 'ngResource']).config(function($routePro
       controller:'ContatosController'
 
     });
+    //Rota novo contato
     $routeProvider.when('/contato',{
+      templateUrl: 'partials/contato.html',
+      controller:'ContatoController'
+    });
+    //Rota contato (detalhe)
+    $routeProvider.when('/contato/:contatoId',{
       templateUrl: 'partials/contato.html',
       controller:'ContatoController'
     });

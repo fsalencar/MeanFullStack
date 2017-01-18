@@ -6,7 +6,7 @@ angular.module('LivroMean').controller('ContatoController',
    let Contato = $resource('/contatos/:id');
 
    if ($routeParams.contatoId){
-     Contato.get({id: $routeParams.contatoId}, function(contato){
+      Contato.get({id: $routeParams.contatoId}, function(contato){
        $scope.contato = contato;
      },
    function(erro){
