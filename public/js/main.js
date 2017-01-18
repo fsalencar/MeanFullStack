@@ -6,7 +6,7 @@ angular.module('LivroMean', ['ngRoute', 'ngResource']).config(function($routePro
       controller:'ContatosController'
 
     });
-    $routeProvider.when('/contato/:contatoId',{
+    $routeProvider.when('/contato',{
       templateUrl: 'partials/contato.html',
       controller:'ContatoController'
     });

@@ -9,6 +9,8 @@ module.exports = function(app) {
         //    .get(controller.listaTodos)
       //      .post(controller.salvaContato);
 
+      app.post('/contatos', controller.salvaContato);
+
       app.route('/contatos/:id')
           //  .get(controller.obtemContato)
             .delete(controller.removeContato);

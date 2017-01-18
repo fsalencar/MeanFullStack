@@ -12,13 +12,38 @@ let contatos = [
 module.exports = function(app) {
 //  let controller = app.controllers.contato;
 
+  let ID_CONTATO_INC = 3;
+
  let controller = {};
   controller.listaContatos = function(req, res){
     res.json(contatos);
     //Envia a lista
 
   };
-  controller.removeContato = function(req, res){
+    controller.salvaContato = function(req, res) {
+      let contato = req.body;
+          contato = contato._id ? atualiza(contato): adiciona(contato);
+      res.json(contato);
+    };
+
+    function adiciona(contatoNovo) {
+
+        contatoNovo._id = ++ID_CONTATO_INC;
+        contatos.push(contatoNovo);
+        return contatoNovo;
+    };
+
+    function atualiza(contatoAlterar) {
+      contatos = contatos.map(function(contato){
+        if(contato._id == contatoAlterar._id){
+          contato = contatoAlterar;
+        }
+        return contato;rs
+      });
+      return contatoAlterar;
+    }
+
+    controller.removeContato = function(req, res){
     let idContato = req.params.id;
     contatos = contatos.filter(function(contato){
       return contato._id != idContato;

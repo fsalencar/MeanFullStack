@@ -11,6 +11,7 @@ angular.module('LivroMean').controller('ContatosController',
             let Contato = $resource('/contatos/:id');
 
             function buscaContatos(){
+
               console.log('passeio');
               Contato.query(
                 function(contatos){
@@ -31,6 +32,7 @@ angular.module('LivroMean').controller('ContatosController',
                 }
               );
             }
+
             });
 
 
