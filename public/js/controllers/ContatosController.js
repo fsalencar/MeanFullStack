@@ -1,14 +1,14 @@
 'use strict'
 
 angular.module('LivroMean').controller('ContatosController',
-  function($resource,$scope){
+  function($resource,$scope, Contato){
 
             $scope.contatos = [];
           //  $scope.total = 0;
             $scope.filtro=''; //Declara o filtro da html contatos para utilizar a propriedade FILTER na página
             $scope.mensagem={texto:''};
 
-            let Contato = $resource('/contatos/:id');
+          //  let Contato = $resource('/contatos/:id');
 
             function buscaContatos(){
 

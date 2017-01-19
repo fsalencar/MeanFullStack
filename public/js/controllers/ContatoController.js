@@ -1,9 +1,9 @@
 'use strict'
 
 angular.module('LivroMean').controller('ContatoController',
- function($scope, $routeParams, $resource){
+ function($scope, $routeParams, $resource, Contato){
 
-   let Contato = $resource('/contatos/:id');
+  // let Contato = $resource('/contatos/:id');
 
    if ($routeParams.contatoId){
       Contato.get({id: $routeParams.contatoId}, function(contato){
