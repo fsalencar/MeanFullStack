@@ -1,3 +1,5 @@
+'use strict'
+
 let app = angular.module('LivroMean',['ngRoute', 'ngResource']);
 
 angular.module('LivroMean', ['ngRoute', 'ngResource']).config(function($routeProvider){ //routeProvider para configurar as rotas (partials)
